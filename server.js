@@ -3,15 +3,13 @@ const app = express();
 const morgan = require('morgan');
 
 const router = require('./routes/router');
-const { calledFirst } = require('./middleware/random.js');
+const { protect } = require('./auth/jwt');
 
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(calledFirst);
 
-app.use('/print', router);
 
-app.get('/', (req, res) => {
+app.get('/', protect, (req, res) => {
     res.send({ msg: 'hello world'});
 }); 
 
