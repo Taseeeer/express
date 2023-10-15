@@ -6,7 +6,7 @@ const createJWT = (user) => {
     return token;
 };
 
-const protect = (req, res) => {
+const protect = (req, res, next) => {
     const bearer = req.headers.authorization;
 
     if(!bearer) {
