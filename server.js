@@ -8,7 +8,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 app.post('/api', protect, (req, res) => {
-    res.send({ greetings: 'you are signed in!'});
+    res.send({ greetings: 'you are logged in!'});
 });
 
 app.post('/user', createUser);
