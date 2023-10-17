@@ -3,7 +3,6 @@ const { hashPassword, comparePassword, createJWT } = require('../auth/jwt');
 const users = [];
 
 const createUser = async (req, res) => {
-    console.log('hereeeeeeeeeeeeeeeeee')
     const username = req.body.username;
     const password = await hashPassword(req.body.password);
 
