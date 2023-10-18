@@ -12,7 +12,10 @@ app.post('/api', protect, (req, res) => {
 });
 
 app.post('/api/user', protect, (req, res) => {
-    res.send({ name: `Logged in as user1`});
+});
+app.get('/api/user/posts', protect, (req, res) => {
+});
+app.get('/api/user/post/:id', protect, (req, res) => {
 });
 
 
