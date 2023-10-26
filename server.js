@@ -11,14 +11,6 @@ app.post('/api', protect, (req, res) => {
     res.send({ greetings: 'you are logged in!'});
 });
 
-app.post('/api/user', protect, (req, res) => {
-});
-app.get('/api/user/posts', protect, (req, res) => {
-});
-app.get('/api/user/post/:id', protect, (req, res) => {
-});
-
-
 app.post('/user', createUser);
 
 module.exports = app;
